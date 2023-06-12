@@ -21,8 +21,13 @@ body{
 }
 .flexicon{
     margin: 10px;
-    margin-left: 0;
     display: flex;
+}
+.flexicon p{
+    font-size: 1.5em;
+}
+.flexicon i{
+    padding: 10%;
 }
 .fondofiltro{
     background-color: #d8d8d8;
@@ -44,6 +49,9 @@ body{
     width: 248px;
     height: 248px;
 }
+.precio{
+    margin: 0.5em;
+}
 .desck{
     display: none;
 }
@@ -60,15 +68,42 @@ body{
 .bar{
     width: 2em;
 }
+footer{
+    background-color: black;
+}
+.socialicon{
+    margin: 1em;
+    text-align: center;
+}
 .footflex{
-    margin-top: 20px;
+   margin: 1em;
    display: flex;
    justify-content: center;
    align-items: center;
-   background-color: black;
    color: white;
 }
 /* MOBILE FIRTS */
 /* DESCKTOP */
-
+@media (min-width:576px){
+    .principal{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3 1fr);
+        grid-template-areas: 
+        "plant1 plant2 plant3 plant4"
+        "plant5 plant6 plant7 plant8"
+        "bar";
+    }
+    .tablenav{
+        grid-area: "bar";
+        margin: 0 auto;
+    }
+    .desck{
+        display: grid;
+        grid-area: auto;
+        margin: 0 auto;
+        width: 280px;
+        border-style: solid;
+    }
+}
 /* DESCKTOP */
