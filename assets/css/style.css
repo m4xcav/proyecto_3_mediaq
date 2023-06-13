@@ -29,6 +29,9 @@ body{
 .flexicon i{
     padding: 10%;
 }
+.menu{
+    display: none;
+}
 .fondofiltro{
     background-color: #d8d8d8;
 }
@@ -68,6 +71,9 @@ body{
 .bar{
     width: 2em;
 }
+.tablenavdesck{
+    display: none;
+}
 footer{
     background-color: black;
 }
@@ -83,23 +89,103 @@ footer{
    color: white;
 }
 /* MOBILE FIRTS */
-/* DESCKTOP */
+/* TABLETA */
 @media (min-width:576px){
+    body{
+        font-family: 'Geologica', sans-serif;
+        display: grid;
+        grid-template-areas:
+        "navbar navbar navbar"
+        "filtro planta planta"
+        "filtro bar bar"
+        "footer footer footer";
+    }
+    .fondonav{
+        grid-area: navbar;
+    }
+    .burgernav{
+        display: none;
+    }
+    .menu{
+        margin: 2em;
+        display: block;
+    }
+    .menu ul{
+        list-style: none;
+    }
+    .menu li{
+        margin: 1em;
+    }
+}
+/* TABLETA */
+/* DESCKTOP */
+@media (min-width:992px){
+    body{
+        font-family: 'Geologica', sans-serif;
+        display: grid;
+        grid-template-areas:
+        "navbar filtro filtro"
+        "navbar planta planta"
+        "footer bar bar";
+        grid-template-columns: 15em 1fr 1fr;
+        grid-template-rows: 5em 1fr 6em;
+    }
+    .fondonav{
+        grid-area: navbar;
+    }
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .menu{
+        margin: 2em;
+        display: block;
+    }
+    .menu ul{
+        list-style: none;
+    }
+    .menu li{
+        margin: 1em;
+    }
+    .burgernav{
+        display: none;
+    }
+    .fondofiltro{
+        grid-area: filtro;
+    }
+    #fplantas{
+        width: 80%;
+        text-align: center;
+    }
+    #fplantas option{
+        text-align: center;
+    }
+    footer{
+        grid-area: footer;
+    }
     .principal{
+        margin-left: 1em;
+        grid-area: planta;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(3 1fr);
-        grid-template-areas: 
-        "plant1 plant2 plant3 plant4"
-        "plant5 plant6 plant7 plant8"
-        "bar";
+        grid-template-rows: repeat(2 1fr);
+        gap: 1em;
     }
     .tablenav{
-        grid-area: "bar";
-        margin: 0 auto;
+        display: none;
+    }
+    .tablenavdesck{
+        grid-area: bar;
+        margin: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: larger;
     }
     .desck{
-        display: grid;
+        display: block;
         grid-area: auto;
         margin: 0 auto;
         width: 280px;
