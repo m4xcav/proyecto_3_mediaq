@@ -130,9 +130,10 @@ footer{
         grid-area: filtro;
     }
     .principal{
+        margin-top: 1em;
+        margin-left: 1em;
         grid-area: planta;
         display: flex;
-        flex-wrap: wrap;
         gap: 1em;
     }
     .tab{
@@ -206,10 +207,13 @@ footer{
         grid-area: footer;
     }
     .principal{
-        margin-left: 1em;
+        width: 80%;
+        margin-left: 10%;
         grid-area: planta;
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
         gap: 1em;
     }
     .tablenav{
